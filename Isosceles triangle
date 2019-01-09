@@ -1,0 +1,32 @@
+/* 
+Language: C.
+The task is to create an isosceles triangle using "^" with a height equals to a number of lines input by user.
+This is how the triangle will look like if a number of lines is 4:
+   ^
+  ^^^
+ ^^^^^
+^^^^^^^
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    int lines;
+    int i;
+    int j;
+    printf ("Enter the number of lines:");
+    scanf ("%d", &lines);
+  
+    for (i=0; i<lines;i++) {
+        for (j=1; j<lines-i; j++) {
+            printf(" ");
+        } //By this nested "for" statement we create the amount of gaps for every line.
+        for (j=1; j<=(i*2)+1; j++) {
+            printf ("^");
+        } // By this nested "for" statement we create the amount of "^" signs for every line.
+        printf("\n");
+    }
+
+    return 0;
+}
